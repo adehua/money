@@ -1,0 +1,104 @@
+html {
+    background: #fff;
+}
+
+header {
+    margin-top: 2rem;
+}
+
+.list-data ul{
+    margin-bottom: 6rem;
+}
+
+.list-data ul li {
+    font-size: 1.6rem;
+    border-top: 1px solid #eee;
+    padding: .3rem 1rem;
+    line-height: 3rem;
+}
+.list-data ul li:last-child {
+    border-bottom: 1px solid #fff;
+}
+
+.list-data ul li span {
+    margin: 0 1rem;
+}
+
+.list-data ul li .price {
+    color: red;
+}
+.list-data ul li p {
+    margin: 0 2rem;
+    color: #A9A0AB;
+}
+
+footer {
+    width: 100%;
+    height: 5.5rem;
+    position: fixed;
+    bottom: 0px;
+    font-size: 0;
+    padding-top: 1.5rem;
+    background-image: url("../img/bg.png");
+    -moz-background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+
+}
+
+footer div {
+    width: 14.28%;
+    height: 100%;
+    text-align: center;
+    position: relative;
+}
+
+footer div img {
+    width: 2rem;
+    position: absolute;
+    left: 50%;
+    margin-left: -1rem;
+}
+
+footer div span {
+    margin-top: 1.5rem;
+    line-height: 3rem;
+    font-size: 1.6rem;
+    display: block;
+}
+
+footer .detailed {
+    float: left;
+}
+
+footer .wallet {
+    float: left;
+}
+
+footer .create {
+    width: 70px;
+    position: absolute;
+    top: -.7rem;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    -webkit-transform: translate(-50%, 0%);
+    -moz-transform: translate(-50%, 0%);
+    -ms-transform: translate(-50%, 0%);
+}
+
+footer .create img {
+    width: 100%;
+    height: 5rem;
+    font-size: 4rem;
+    position: absolute;
+    left: 1rem;
+    display: block;
+}
+
+footer .report {
+    float: right;
+}
+
+footer .remind {
+    float: right;
+}

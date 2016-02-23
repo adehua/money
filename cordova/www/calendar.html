@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <title>陈德华</title>
+    <!--<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>-->
+    <link rel="stylesheet" type="text/css" href="./css/main.css?var=0.01">
+    <link rel="stylesheet" type="text/css" href="./css/form.css?var=0.01">
+</head>
+<body>
+<div id="calendar">
+    <div class="header">
+        <a href="index.html" class="back"><img src="img/back.png" alt=""></a>
+        <div class="select">2016年2月</div>
+        <a href="javascript:void(0);" class="add">+</a>
+    </div>
+    <div id="calendar-content">
+        <div id="calendar-week">
+            <span>一</span> <span>二</span> <span>三</span> <span>四</span> <span>五</span> <span>六</span> <span>日</span>
+        </div>
+        <div id="calendar-list">
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/handlebars-v4.0.2.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<!--<script type="text/javascript" src="js/calendar.js"></script>-->
+<script id="data-template" type="text/x-handlebars-template">
+    {{#foreach this}}
+        <div><a href="javascript:void(0);">{{day}}</a><span class="ic">+{{pay}}</span><span class="pay">-{{income}}</span></div>
+    {{/foreach}}
+</script>
+<script>
+    data();
+    // 动态加载类别
+    function data() {
+        $.ajax({
+            url: 'http://api.xnnye.cn/money/nowDateDate',
+            type: 'get',
+            dataType: "jsonp",
+            success: function (datas) {
+                if(datas) {
+                    var moneys = datas.data;
+                    var source = $("#data-template").html();
+                    var template = Handlebars.compile(source);
+                    Handlebars.registerHelper("foreach", function (moneys, options) {
+                        var templateWithInterpolatedData = "";
+                        for (var i = 0; i < moneys.length; i++) {
+                            templateWithInterpolatedData += options.fn(moneys[i]);
+                        }
+                        return templateWithInterpolatedData; //把所有的数据对象插入到模板后生成的html字符串返回。
+                    });
+                    var html = template(moneys);
+                    console.log(datas);
+                    $("#calendar-list").append(html);
+//                    iCate_id = cates[0].cate_id;
+//                    $(".form-name").text(cates[0].cate_name)
+//                    // 点击类别
+//                    $(".list-type ul li").on("click", function () {
+//                        iCate_id = $(this).data("cate_id");
+//                        $(".form-icon img").attr("src", $(this).children("img").attr("src"))
+//                        $(".form-name").text($(this).children("span").text())
+//                    });
+                }
+            }
+        });
+    }
+</script>

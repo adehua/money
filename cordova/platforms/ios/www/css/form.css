@@ -1,0 +1,336 @@
+/*body{*/
+    /*position: fixed;*/
+    /*bottom: 0;*/
+    /*top: 0;*/
+    /*width: 100%;*/
+    /*left: 0;*/
+/*}*/
+/* 头部 */
+header {
+    width: 100%;
+    height: 6.25rem;
+    line-height: 6.25rem;
+    padding-top: 2rem;
+    font-size: 2rem;
+    font-family: '黑体', 'arial';
+    border-bottom: solid 1px #dfdfdf;
+    text-align: center;
+    background: #fff;
+    position: fixed;
+    z-index: 5;
+}
+
+header .container {
+    padding-top: .75rem;
+    margin: auto;
+    height: 2.5rem;
+    line-height: 2.5rem;
+
+}
+
+header .container .pay {
+    width: 5rem;
+    display: inline-block;
+    border-radius: .5rem 0 0 .5rem;
+    border: 1px solid #2fb2e8;
+    background-color: #fff;
+    margin-right: -.3rem;
+    color: #2fb2e8;
+}
+
+header .container .income {
+    width: 5rem;
+    display: inline-block;
+    border-radius: 0 .5rem .5rem 0;
+    border: 1px solid #2fb2e8;
+    background-color: #fff;
+    margin-left: -.3rem;
+    color: #2fb2e8;
+}
+
+header .container .true {
+    background-color: #2fb2e8;
+    color: #fff;
+}
+
+header .container .x {
+    font-size: 3rem;
+    right: 2rem;
+    top: 2.7rem;
+    position: absolute;
+}
+
+/* 输入框 */
+.form {
+    width: 100%;
+    height: 4rem;
+    background: #fff;
+    border-bottom: solid 1px #dfdfdf;
+    position: fixed;
+    top: 6.25rem;
+    z-index: 5;
+}
+
+.form .form-icon {
+    width: 5rem;
+    /*height: 3rem;*/
+    text-align: center;
+    display: inline-block;
+}
+
+.form .form-icon img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 3rem;
+    margin-top: -.5rem;
+}
+
+.form .form-name {
+    color: #000;
+    display: inline-block;
+    font-size: 2rem;
+    line-height: 4rem;
+    width: 8rem;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.form .form-price {
+    color: #000;
+    display: inline-block;
+    font-size: 2.4rem;
+    line-height: 4rem;
+    font-weight: 600;
+    float: right;
+    margin-right: 2rem;
+}
+
+/* 键盘 */
+.keyboard {
+    font-size: 1.4rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    border-top: solid 1px #dfdfdf;
+}
+
+.keyboard .top {
+    height: 3rem;
+    line-height: 3rem;
+    border-bottom: solid 1px #dfdfdf;
+    background: rgba(255, 255, 255, .8);
+}
+
+.keyboard .top .select-account {
+    border: solid 1px #dfdfdf;
+    padding: .2rem .5rem;
+    margin-left: 1rem;
+    border-radius: .3rem;
+}
+
+.keyboard .top .select-time {
+    border: solid 1px #dfdfdf;
+    padding: .2rem .5rem;
+    margin-left: 1rem;
+    border-radius: .3rem;
+}
+
+.keyboard .top .select-member {
+    /*padding: .2rem .5rem;*/
+    margin-left: 1rem;
+    float: right;
+    margin-right: 1rem;
+}
+
+.keyboard .top .select-content {
+    /*padding: .2rem .5rem;*/
+    float: right;
+    margin-right: 1rem;
+}
+
+.input-content {
+    position: fixed;
+    bottom: 0rem;
+    width: 100%;
+    left: 0;
+    z-index: 13;
+    height: 8rem;
+    padding: 1rem;
+    line-height: 3rem;
+    font-size: 2rem;
+}
+
+.keyboard .keyboard-button {
+    width: 100%;
+    font-size: 0;
+}
+
+.keyboard .keyboard-button button {
+    width: 25%;
+    font-size: 2rem;
+    display: inline-block;
+    text-align: center;
+    line-height: 4.4rem;
+    border: solid 1px #484646;
+    background: #686868;
+    color: #fff;
+}
+
+.keyboard .keyboard-button .button17 {
+    width: 50%;
+}
+
+.list-type {
+    padding-top: 10.25rem;
+    padding-bottom: 28rem;
+}
+
+.list-type ul {
+    width: 100%;
+    font-size: 0;
+}
+
+.list-type ul li {
+    width: 20%;
+    font-size: 2rem;
+    display: inline-block;
+    text-align: center;
+    height: 5rem;
+    margin-top: 1rem;
+    color: #fff;
+    position: relative;
+}
+
+.list-type ul li img {
+    height: 3rem;
+    border-radius: 3rem;
+    display: block;
+    position: absolute;
+    left: 50%;
+    margin-left: -1.5rem;
+}
+
+.list-type ul li span {
+    margin-top: 3rem;
+    height: 2rem;
+    color: rgba(123, 123, 123, 1);
+    display: block;
+    font-size: 1.6rem;
+    overflow: hidden;
+}
+
+/* 账户 */
+.account {
+    width: 100%;
+    position: fixed;
+    z-index: 11;
+    bottom: 0;
+    background: rgba(255, 255, 255, 1);
+}
+
+.account h1 {
+    line-height: 4rem;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+    color: #666;
+    font-size: 2.4rem;
+}
+
+.account ul li {
+    /*border-top: 1px solid #eee;*/
+    height: 4rem;
+    position: relative;
+}
+
+.account ul li img {
+    width: 4rem;
+    position: absolute;
+    padding: 1.2rem;
+}
+
+.account ul li p {
+    display: inline-block;
+    width: 90%;
+    border-bottom: 1px solid #eee;
+    height: 4rem;
+    margin-left: 4rem;
+}
+
+.account ul li:last-child {
+    border-bottom: 1px solid #fff;
+}
+
+.account ul li p .a-span1 {
+    display: block;
+    height: 2.4rem;
+    line-height: 2.4rem;
+    font-size: 1.8rem;
+}
+
+.account ul li p .a-span2 {
+    display: block;
+    height: 1.4rem;
+    line-height: 1.4rem;
+    color: #999;
+}
+
+/*  成员 */
+.member {
+    width: 100%;
+    position: fixed;
+    z-index: 11;
+    bottom: 0;
+    background: rgba(255, 255, 255, 1);
+}
+
+.member h1 {
+    line-height: 4rem;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+    color: #666;
+    font-size: 1.4rem;
+}
+
+.member span {
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+.member em {
+    position: absolute;
+    color: #00a0e9;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.member em:first-child {
+    left: 1rem;
+}
+
+.member em:last-child {
+    right: 1rem;
+}
+
+.member ul li {
+    line-height: 4rem;
+    overflow: hidden;
+    padding-left: 1rem;
+    border-bottom: 1px solid #eee;
+    position: relative;
+}
+
+.member ul li:last-child {
+    border-bottom: 1px solid #fff;
+}
+
+.select-true:after {
+    line-height: 4rem;
+    content: "\2714";
+    font-size: 2rem;
+    position: absolute;
+    right: 2rem;
+    top: 0px;
+    color: blue;
+}

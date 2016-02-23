@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <title>陈德华</title>
+    <!--<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>-->
+    <link rel="stylesheet" type="text/css" href="./css/main.css?var=0.01">
+    <link rel="stylesheet" type="text/css" href="./css/form.css?var=0.01">
+</head>
+<body>
+<header>
+    <div class="container">
+        <a href="javascript:void(0);" class="a pay true" data-type="0">支出</a>
+        <a href="javascript:void(0);" class="a income" data-type="1">收入</a>
+        <a href="index.html" class="x">X</a>
+    </div>
+</header>
+
+<!-- 输入框 -->
+<section class="form">
+    <div class="form-icon"><img src="./img/chendehua.jpg" alt=""></div>
+    <div class="form-name">吃饭</div>
+    <div class="form-price">0.00</div>
+</section>
+
+<!--  列表 -->
+<section class="list-type">
+    <ul>
+
+    </ul>
+</section>
+<textarea name="content" class="input-content" style="display: none">备注: </textarea>
+<!-- 键盘 -->
+<section class="keyboard">
+    <div class="top">
+        <a href="javascript:void(0);" class="select-account formSelect" data-select="account">选择账户</a>
+        <a href="javascript:void(0);" class="select-time formSelect" data-select="time">1月13日</a>
+        <a href="javascript:void(0);" class="select-content formSelect1" data-select="content">编辑</a>
+        <a href="javascript:void(0);" class="select-member formSelect" data-select="member">+</a>
+    </div>
+    <div class="keyboard-button">
+        <button class="button1 keyboard-button-reset">C</button>
+        <button class="button2 keyboard-button-cancel"><</button>
+        <button class="button3 keyboard-button-mo">%</button>
+        <button class="button4 keyboard-button-chu">/</button>
+        <button class="button5 keyboard-button-mbutton">7</button>
+        <button class="button6 keyboard-button-mbutton">8</button>
+        <button class="button7 keyboard-button-mbutton">9</button>
+        <button class="button8 keyboard-button-cheng">X</button>
+        <button class="button9 keyboard-button-mbutton">4</button>
+        <button class="button10 keyboard-button-mbutton">5</button>
+        <button class="button11 keyboard-button-mbutton">6</button>
+        <button class="button12 keyboard-button-jia">+</button>
+        <button class="button13 keyboard-button-mbutton">1</button>
+        <button class="button14 keyboard-button-mbutton">2</button>
+        <button class="button15 keyboard-button-mbutton">3</button>
+        <button class="button16 keyboard-button-jian">-</button>
+        <button class="button17 keyboard-button-mbutton">0</button>
+        <button class="button18 keyboard-button-float">.</button>
+        <button class="button19 keyboard-button-deng" style="display: none">=</button>
+        <button class="button20">确定</button>
+    </div>
+</section>
+
+<!-- 账户 -->
+<!--<div class="make-bg" style="display: none"></div>-->
+<section class="account" style="display: none">
+    <h1>选择账户</h1>
+    <ul>
+        <li class="a-xianjing select-true" data-value="1" ><img src="./img/xianjing.png" /><p><span class="a-span1">现金</span><span class="a-span2">余额:<em>0.00</em></span></p></li>
+        <li class="a-xinyongka" data-value="2"><img src="./img/xinyongka.png" /><p><span class="a-span1">储蓄卡</span><span class="a-span2">余额:<em>0.00</em></span></p></li>
+        <li class="a-yinghangka" data-value="3"><img src="./img/yinghangka.png" /><p><span class="a-span1">信用卡</span><span class="a-span2">余额:<em>0.00</em></span></p></li>
+        <li class="a-weixin" data-value="4"><img src="./img/wangshangzhifu.png" /><p><span class="a-span1">微信</span><span class="a-span2">余额:<em>10.00</em></span></p></li>
+        <li class="a-zhifubao" data-value="5"><img src="./img/wangshangzhifu.png" /><p><span class="a-span1">支付宝 or 花呗</span><span class="a-span2">余额:<em>0.00</em></span></p></li>
+    </ul>
+</section>
+
+<!-- 成员 -->
+<section class="member" style="display: none">
+    <h1><em>编辑</em><span>成员</span><em class="member-ok">完成</em></h1>
+    <ul>
+        <li class="select-true" data-value="1">我</li>
+        <li data-value="2">爸爸</li>
+    </ul>
+</section>
+
+
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/compute.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/form.js"></script>
+<script type="text/javascript" src="js/handlebars-v4.0.2.js"></script>
+<script id="cate-template" type="text/x-handlebars-template">
+    {{#foreach this}}
+    <li class="" data-cate_id="{{cate_id}}">
+        <img src="./img/chendehua.jpg" alt="">
+        <span>{{cate_name}}</span>
+    </li>
+    {{/foreach}}
+</script>
+</body>
+</html>
